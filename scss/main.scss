@@ -1,5 +1,8 @@
 //Open console - > npm i scss-reset
 @import "~scss-reset/reset";
-@import "generic/colors";
 @import "settings/variables";
 @import "settings/mixins";
+@import "generic/colors";
+@import "generic/settings";
+@import "generic/fonts";
+@import "elements/menu";

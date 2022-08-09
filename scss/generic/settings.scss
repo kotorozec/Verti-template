@@ -1,6 +1,20 @@
+@use "sass:map";
+@import "scss/settings/variables";
+@import "scss/generic/colors";
+
+html {
+  font-size:$default-font-size;
+  overflow-x: hidden;
+}
+body {
+  background-color: map.get($colors,background);
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container {
   max-width: 1352px;
   width: 100%;
   padding-inline: 20px;
+  padding-block:10px;
   margin: 0 auto;
 }

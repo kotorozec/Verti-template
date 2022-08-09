@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Open+Sans:wght@300;400;700;800&display=swap');
+@import "scss/generic/colors";
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+}
+h1 {
+  font-size: 4em;
+  letter-spacing: 0.05em;
+  padding:0.25em 0.2em 0.25em 0.2em;
+  background-color: map-get($colors, logo);
+  color:map-get($colors, text-accent);
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: map-get($colors, text-accent);
+      color:map-get($colors, logo);
+    }
+}
+

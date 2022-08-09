@@ -1,0 +1,12 @@
+@use "sass:map";
+
+$colors: (
+        logo:#ff4486,
+        background:#E4E4E4,
+        text-color:#676d79,
+        text-accent:#fff,
+        primary:#10a0d5,
+        secondary:#e8e8e8,
+        transparent:transparent,
+        mobile-background:linear-gradient(109.6deg, rgb(245, 95, 152) 11.2%, rgb(254, 148, 136) 100.2%),
+);
