@@ -1,10 +1,9 @@
 // ******* Scroll Reveal functions *******
-ScrollReveal().reveal(".headline");
-ScrollReveal().reveal(".tagline", {
+ScrollReveal().reveal(".header__logo", {
     delay: 500
 });
-ScrollReveal().reveal(".punchline", {
-    delay: 2000
+ScrollReveal().reveal(".menu-list__link", {
+    delay: 1000
 });
 //  ******* Menu functions  *******
 const mobileNav = document.querySelector(".menu-list");

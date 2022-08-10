@@ -361,7 +361,7 @@ nav {
 
 .flex .menu-list {
   width: 90%;
-  height: 85vh;
+  height: 55vh;
   background: linear-gradient(109.6deg, #f55f98 11.2%, #fe9488 100.2%);
   border-radius: 40px;
   flex-direction: column;
