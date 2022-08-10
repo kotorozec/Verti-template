@@ -8,7 +8,7 @@
 nav {
   @include flex(flex, center, center, column);
   width: 100%;
-  background-color: map-get($colors,menu-background);
+  background-color: map-get($colors, menu-background);
 }
 
 .flex {
@@ -24,12 +24,13 @@ nav {
     @include flex(flex, space-evenly, center, column);
     position: absolute;
     top: 10em;
-    width: 90%;
+    width: 94%;
     height: 55vh;
-    border-radius: 40px;
-    background: map-get($colors,mobile-background);
+    border-radius: 6px;
+    background: map-get($colors, mobile-background);
     transform: translate(120%);
     transition: all 0.7s ease-in-out;
+    z-index: 100;
 
     &.active {
       transform: translate(0%);
@@ -81,22 +82,27 @@ nav {
   position: absolute;
   top: 10px;
   right: 20px;
-   &.active {
-      span:first-of-type {
-        transform: translateY(-100px);
 
-      }
-     span:nth-of-type(2) {
-       transform: rotate(40deg) translateY(5px);
+  &.active {
+    span:first-of-type {
+      transform: translateY(-100px);
 
-     }
-     span:nth-of-type(3) {
-       transform: rotate(-40deg) translateY(-5px);
-     }
     }
+
+    span:nth-of-type(2) {
+      transform: rotate(40deg) translateY(5px);
+
+    }
+
+    span:nth-of-type(3) {
+      transform: rotate(-40deg) translateY(-5px);
+    }
+  }
+
   @include tablet {
     display: none;
   }
+
   .line {
     width: 3em;
     height: 0.3em;

@@ -1,0 +1,94 @@
+@import "scss/generic/colors";
+@import "scss/settings/mixins";
+
+.banners {
+  padding: 15px;
+  border-radius: 6px;
+  @include tablet {
+    padding: 4.5em 3em;
+  }
+}
+
+.banners--background {
+  background-color: map-get($colors, text-accent);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.pink--accent {
+  color: map-get($colors, logo)
+}
+
+.banners__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+
+.banners__buttons {
+  @include flex(flex, center, center, column);
+  width: 100%;
+}
+
+.banners__txt {
+  @include tablet {
+    @include flex(flex, center, center, column);
+  }
+}
+
+.banners__primary-button {
+  background-color: map-get($colors, primary);
+  color: map-get($colors, text-accent);
+  transition: background-color 0.5s ease-in;
+
+  &::before {
+    content: '\f061';
+    background-color: map-get($colors, text-accent);
+    color: map-get($colors, primary);
+  }
+
+  &:hover {
+    background-color: map-get($colors, logo);
+
+    &::before {
+      animation: color-change 0.5s ease-in forwards;
+    }
+  }
+}
+
+.banners__secondary-button {
+  background-color: map-get($colors, secondary);
+  color: map-get($colors, headings);
+
+  &::before {
+    content: '\3f';
+    background-color: map-get($colors, headings);
+    color: map-get($colors, secondary);
+    padding: 2px 8px;
+  }
+
+  &:hover {
+    background-color: map-get($colors, primary);
+    color: map-get($colors, text-accent);
+
+    &::before {
+      animation: color-change-secondary 0.5s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes color-change {
+  to {
+    color: map-get($colors, logo);
+  }
+}
+
+@keyframes color-change-secondary {
+  to {
+    color: map-get($colors, primary);
+    background-color: map-get($colors, text-accent);
+  }
+}
