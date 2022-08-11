@@ -68,7 +68,11 @@
     background-color: map-get($colors, headings);
     color: map-get($colors, secondary);
     padding: 2px 8px;
+    @include desktop {
+      padding: 5px 10px;
+    }
   }
+
 
   &:hover {
     background-color: map-get($colors, primary);

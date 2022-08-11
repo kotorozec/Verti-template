@@ -11,8 +11,13 @@ ScrollReveal().reveal('.banners__secondary-button', {delay: 3500});
 //  ******* Menu functions  *******
 const mobileNav = document.querySelector('.menu-list');
 const burgerBtn = document.querySelector('.burger-menu');
+const hidden = document.querySelector('nav');
 
 burgerBtn.addEventListener('click', function () {
     mobileNav.classList.toggle('active');
     burgerBtn.classList.toggle('active');
+    hidden.classList.toggle('active');
 })
+
+
+

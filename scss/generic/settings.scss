@@ -35,8 +35,8 @@ body {
 
   &::before {
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 52%;
+    left:15%;
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
@@ -49,5 +49,17 @@ body {
   @include tablet {
     width: 100%;
     padding: 20px 40px;
+  }
+  @include desktop {
+    padding: 30px 40px;
+    font-size:3em;
+    max-width: 400px;
+    &::before {
+      width: 40px;
+      height: 40px;
+      font-size: 1em;
+      padding: 5px 6px;
+      transform: translate(235px, -50%);
+    }
   }
 }

@@ -23,9 +23,11 @@ ScrollReveal().reveal(".banners__secondary-button", {
 //  ******* Menu functions  *******
 const mobileNav = document.querySelector(".menu-list");
 const burgerBtn = document.querySelector(".burger-menu");
+const hidden = document.querySelector("nav");
 burgerBtn.addEventListener("click", function() {
     mobileNav.classList.toggle("active");
     burgerBtn.classList.toggle("active");
+    hidden.classList.toggle("active");
 });
 
 //# sourceMappingURL=index.72be8890.js.map
