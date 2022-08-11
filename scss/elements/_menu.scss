@@ -22,8 +22,8 @@ nav {
 
   .menu-list {
     @include flex(flex, space-evenly, center, column);
-    position: absolute;
-    top: 10em;
+    position: fixed;
+    top: 1em;
     width: 94%;
     height: 75vh;
     border-radius: 6px;

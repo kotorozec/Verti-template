@@ -18,7 +18,7 @@
         <nav>
             <ul class="menu-list" id="menu">
                 <li class="menu-list__bullet"><a href="#welcome" class="menu-list__link">Welcome</a></li>
-                <li class="menu-list__bullet"><a href="#features" class="menu-list__link">Dropdown</a></li>
+                <li class="menu-list__bullet"><a href="#features" class="menu-list__link">Features</a></li>
                 <li class="menu-list__bullet"><a href="#" class="menu-list__link">Left sidebar</a></li>
                 <li class="menu-list__bullet"><a href="#" class="menu-list__link">Right sidebar</a></li>
                 <li class="menu-list__bullet"><a href="#" class="menu-list__link">No sidebar</a></li>
@@ -35,19 +35,40 @@
     <section class="banners" id="welcome">
         <div class="container banners__grid banners--background">
             <div class="banners__txt">
-                <h2 class="banners__text_heading"><span class="banners_first-reveal">Hi</span><span
-                        class="pink--accent banners_second-reveal">.</span>
-                    <span class="banners_third-reveal">This is Verti</span><span
-                            class="pink--accent banners_forth-reveal">!</span></h2>
-                <p class="banners__text__intro">It's a free responsive site template by HTML5 UP</p>
+                <h2 class="banners__text_heading"><span id="banners_first-reveal">Hi</span><span
+                        class="pink--accent" id="banners_second-reveal">.</span>
+                    <span id="banners_third-reveal">This is Verti</span><span
+                            class="pink--accent" id="banners_forth-reveal">!</span></h2>
+                <p class="banners__text__intro" id="text__intro">It's a free responsive site template by HTML5 UP</p>
             </div>
             <div class="banners__buttons">
-                <a class="btn banners__primary-button" href="#">Ok let's go</a>
-                <a class="btn banners__secondary-button" href="#">More info</a>
+                <a class="btn banners__primary-button" href="#" id="primary-button">Ok let's go</a>
+                <a class="btn banners__secondary-button" href="#" id="secondary-button">More info</a>
             </div>
         </div>
     </section>
-    <section class="features" id="features"></section>
+    <section class="features" id="features">
+        <div class="features-grid">
+            <article class="features__article">
+                <img src="/assets/1.jpg" alt="">
+                <h2>An interesting title</h2>
+                <p>This is also an interesting subtitle</p>
+                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+            </article>
+            <article class="features__article">
+                <img src="/assets/2.jpg" alt="">
+                <h2>Put something here</h2>
+                <p>Maybe here as well I think</p>
+                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+            </article>
+            <article class="features__article">
+                <img src="/assets/3.jpg" alt="">
+                <h2>Oh, and finally ...</h2>
+                <p>Here's another intriguing subtitle</p>
+                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+            </article>
+        </div>
+    </section>
 </main>
 <script src="js/main.js"></script>
 </body>

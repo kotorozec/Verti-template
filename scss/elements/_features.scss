@@ -1,0 +1,59 @@
+@import "scss/generic/colors";
+@import "scss/settings/mixins";
+
+.features {
+  padding-inline: 1.5em;
+  padding-block: 0 50px;
+  @include tablet {
+    padding-inline: 3em;
+  }
+}
+
+.features-grid {
+  max-width: 1352px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  row-gap: 30px;
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
+.features__article {
+  @include flex(flex, center, flex-start, column);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: map-get($colors, text-accent);
+  transition:box-shadow 0.5s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 6px 6px map-get($colors, text-color);
+  }
+  img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  h2 {
+    padding-block: 30px 10px;
+    padding-inline: 10px;
+    font-size: 2em;
+    font-weight: 800;
+    color: map-get($colors, headings);
+  }
+
+  p {
+    padding-inline: 10px;
+    color: map-get($colors, text-color);
+    font-size: 1.7em;
+    font-weight: 300;
+    max-width: 90%;
+  }
+
+  p:nth-of-type(2) {
+    padding-block: 30px;
+  }
+}
