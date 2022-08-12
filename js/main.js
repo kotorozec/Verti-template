@@ -7,6 +7,7 @@ ScrollReveal().reveal('#text__intro', {delay: 2500});
 ScrollReveal().reveal('#primary-button', {delay: 3000});
 ScrollReveal().reveal('#secondary-button', {delay: 3500});
 ScrollReveal().reveal('#features', {delay: 500});
+ScrollReveal().reveal('#content', {delay: 500});
 
 
 

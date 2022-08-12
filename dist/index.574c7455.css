@@ -315,6 +315,7 @@ body {
 .btn {
   max-width: 300px;
   width: 100%;
+  max-height: 80px;
   border-radius: 6px;
   flex-direction: row;
   justify-content: center;
@@ -468,7 +469,7 @@ nav {
     color: #676d79;
     background: none;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 3em;
     display: flex;
@@ -693,7 +694,7 @@ nav {
   box-shadow: 0 0 6px 6px #676d79;
 }
 
-.features__article img {
+.features__article .features__article__img {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -710,12 +711,154 @@ nav {
   color: #676d79;
   max-width: 90%;
   padding-inline: 10px;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 300;
+}
+
+@media only screen and (min-width: 992px) {
+  .features__article p {
+    font-size: 1.7em;
+  }
 }
 
 .features__article p:nth-of-type(2) {
   padding-block: 30px;
+}
+
+.content {
+  padding-inline: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    padding-inline: 3em;
+  }
+}
+
+.content__grid {
+  grid-template-columns: 1fr;
+  display: grid;
+}
+
+@media only screen and (min-width: 992px) {
+  .content__grid {
+    grid-template-columns: 300px auto;
+    column-gap: 50px;
+  }
+}
+
+.content__bigger-col {
+  order: 1;
+}
+
+.content__bigger-col h2 {
+  padding-block: 30px;
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 992px) {
+  .content__bigger-col h2 {
+    font-size: 4em;
+  }
+}
+
+.content__bigger-col p {
+  color: #676d79;
+  margin-bottom: 1.5em;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+@media only screen and (min-width: 992px) {
+  .content__bigger-col p {
+    font-size: 1.7em;
+  }
+
+  .content__bigger-col {
+    order: 2;
+  }
+}
+
+.content__small-col {
+  order: 2;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  display: grid;
+}
+
+@media only screen and (min-width: 992px) {
+  .content__small-col {
+    order: 1;
+    grid-template-columns: 150px 150px;
+  }
+}
+
+.content__small-col .content__heading {
+  text-align: left;
+  grid-column: span 2;
+  padding-block: 30px;
+  font-size: 2em;
+}
+
+.content__small-col .content__img {
+  border-radius: 8px;
+}
+
+.content__button {
+  color: #fff;
+  background-color: #10a0d5;
+  transition: background-color .5s ease-in;
+}
+
+.content__button:before {
+  content: "";
+  color: #10a0d5;
+  background-color: #fff;
+  left: 10%;
+}
+
+.content__button:hover {
+  background-color: #ff4486;
+}
+
+.content__button:hover:before {
+  animation: color-change .5s ease-in forwards;
+}
+
+@media only screen and (min-width: 768px) {
+  .content__button:before {
+    transform: translate(0, -50%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content__button {
+    max-width: 600px;
+    place-self: center;
+    padding: 30px 40px;
+    font-size: 3em;
+  }
+
+  .content__button:before {
+    width: 40px;
+    height: 40px;
+    padding: 5px 6px;
+    font-size: 1em;
+    transform: translate(0, -50%);
+  }
+}
+
+.btn--more {
+  max-height: 70px;
+  grid-column: span 2;
+}
+
+.btn--more:before {
+  content: "";
+  color: #fff;
+  background-color: #0000;
+  transform: translate(0, -50%);
 }
 
 /*# sourceMappingURL=index.574c7455.css.map */

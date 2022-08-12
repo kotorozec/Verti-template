@@ -1,0 +1,116 @@
+@import "scss/generic/colors";
+@import "scss/settings/mixins";
+
+.content {
+  padding-inline:1em;
+  @include tablet {
+    padding-inline:3em;
+  }
+}
+
+.content__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include desktop {
+    grid-template-columns: 300px auto;
+    column-gap: 50px;
+  }
+}
+
+.content__bigger-col {
+  order: 1;
+
+  h2 {
+    font-size: 2em;
+    padding-block: 30px;
+    @include desktop {
+      font-size: 4em;
+    }
+  }
+
+  p {
+    color: map-get($colors, text-color);
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    line-height: 2em;
+    @include desktop {
+      font-size: 1.7em;
+    }
+  }
+
+  @include desktop {
+    order: 2;
+  }
+}
+
+.content__small-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  order: 2;
+
+  @include desktop {
+    order: 1;
+    grid-template-columns: 150px 150px;
+  }
+
+  .content__heading {
+    grid-column: span 2;
+    text-align: left;
+    font-size: 2em;
+    padding-block: 30px
+  }
+  .content__img {
+    border-radius: 8px;
+  }
+}
+
+.content__button {
+  background-color: map-get($colors, primary);
+  color: map-get($colors, text-accent);
+  transition: background-color 0.5s ease-in;
+  &::before {
+    content: '\f061';
+    background-color: map-get($colors, text-accent);
+    color: map-get($colors, primary);
+    left:10%
+  }
+
+  &:hover {
+    background-color: map-get($colors, logo);
+
+    &::before {
+      animation: color-change 0.5s ease-in forwards;
+    }
+  }
+  @include tablet {
+    &::before {
+      transform: translate(0px, -50%);
+    }
+  }
+  @include desktop {
+    padding: 30px 40px;
+    font-size: 3em;
+    max-width: 600px;
+    place-self: center;
+    &::before {
+      width: 40px;
+      height: 40px;
+      font-size: 1em;
+      padding: 5px 6px;
+      transform: translate(0px, -50%);
+    }
+  }
+}
+
+.btn--more {
+  grid-column: span 2;
+  max-height: 70px;
+  &::before {
+    content: '\f15c';
+    color: map-get($colors,text-accent);
+    background-color: map-get($colors, transparent);
+    transform: translate(0, -50%);
+  }
+}

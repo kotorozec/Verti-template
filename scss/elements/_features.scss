@@ -32,7 +32,7 @@
   &:hover {
     box-shadow: 0 0 6px 6px map-get($colors, text-color);
   }
-  img {
+ .features__article__img {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
   }
@@ -48,9 +48,12 @@
   p {
     padding-inline: 10px;
     color: map-get($colors, text-color);
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 300;
     max-width: 90%;
+    @include desktop {
+      font-size: 1.7em;
+    }
   }
 
   p:nth-of-type(2) {
