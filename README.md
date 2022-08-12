@@ -6,8 +6,8 @@ Fully responsive webstite with Scroll Reveal.
 
 - HTML5 markup,
 - SASS (SCSS),
+- Partials,
 - BEM,
-- Maps and Mixins,
 - GRID,
 - Flexbox,
 - Scroll Reveal.js
