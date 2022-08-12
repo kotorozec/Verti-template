@@ -26,6 +26,9 @@ ScrollReveal().reveal("#features", {
 ScrollReveal().reveal("#content", {
     delay: 500
 });
+ScrollReveal().reveal("#footer", {
+    delay: 500
+});
 //  ******* Menu functions  *******
 const mobileNav = document.querySelector(".menu-list");
 const burgerBtn = document.querySelector(".burger-menu");

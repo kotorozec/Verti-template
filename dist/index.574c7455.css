@@ -451,6 +451,7 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding-right: 20px;
   transition: all .7s ease-in-out;
   display: flex;
   position: fixed;
@@ -744,6 +745,7 @@ nav {
   .content__grid {
     grid-template-columns: 300px auto;
     column-gap: 50px;
+    padding-block: 30px;
   }
 }
 
@@ -765,6 +767,7 @@ nav {
 .content__bigger-col p {
   color: #676d79;
   margin-bottom: 1.5em;
+  padding-right: 4em;
   font-size: 1.5em;
   font-weight: 300;
   line-height: 2em;
@@ -789,6 +792,7 @@ nav {
 
 @media only screen and (min-width: 992px) {
   .content__small-col {
+    max-height: 500px;
     order: 1;
     grid-template-columns: 150px 150px;
   }
@@ -796,8 +800,9 @@ nav {
 
 .content__small-col .content__heading {
   text-align: left;
+  padding-block: 40px 10px;
   grid-column: span 2;
-  padding-block: 30px;
+  padding-left: 5px;
   font-size: 2em;
 }
 
@@ -834,10 +839,10 @@ nav {
 
 @media only screen and (min-width: 992px) {
   .content__button {
-    max-width: 600px;
+    max-width: 400px;
     place-self: center;
     padding: 30px 40px;
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .content__button:before {
@@ -845,13 +850,24 @@ nav {
     height: 40px;
     padding: 5px 6px;
     font-size: 1em;
-    transform: translate(0, -50%);
+    left: 5%;
+    transform: translate(10px, -50%);
   }
 }
 
 .btn--more {
+  max-width: 150px;
   max-height: 70px;
   grid-column: span 2;
+  place-self: start;
+  padding-right: 10px;
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn--more {
+    font-size: 2.5em;
+  }
 }
 
 .btn--more:before {
@@ -859,6 +875,120 @@ nav {
   color: #fff;
   background-color: #0000;
   transform: translate(0, -50%);
+}
+
+.footer-grid {
+  grid-template-columns: 1fr;
+  place-items: start;
+  row-gap: 30px;
+  padding-block: 50px 20px;
+  padding-inline: 1em;
+  display: grid;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 3em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+
+.footer-grid .footer__article {
+  border-bottom: 1px solid #676d79;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 10px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-grid .footer__article {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-grid .footer__article {
+    padding-block: 50px;
+  }
+}
+
+.footer-grid .footer__article h3 {
+  font-size: 2em;
+}
+
+.footer-grid .footer__article a {
+  color: #676d79;
+  font-size: 1.5em;
+}
+
+.footer-grid .footer__article .footer__article__logo {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  display: flex;
+}
+
+.footer-grid .footer__article .footer__article__logo i {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background-color: #676d79;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 25px;
+  transition: color .5s ease-in-out, background-color .5s ease-in-out;
+}
+
+.footer-grid .footer__article .footer__article__logo i:hover {
+  color: #ff4486;
+  background-color: #fff;
+}
+
+.copyright {
+  width: 100%;
+  min-height: 100px;
+  color: #676d79;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-block: 10px;
+  padding-inline: 1em;
+  font-size: 1.3em;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .copyright {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding-inline: 3em;
+    font-size: 1.5em;
+    display: flex;
+  }
+
+  .copyright p:not(:last-of-type) {
+    border-right: 1px solid #676d79;
+    padding-right: 20px;
+  }
+}
+
+.copyright a {
+  color: #676d79;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.574c7455.css.map */
